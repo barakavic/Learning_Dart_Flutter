@@ -1,27 +1,13 @@
-#!/bin/bash
+#Ignore everything by default
 
-# Define the .gitignore file path
-GITIGNORE_FILE=".gitignore"
+*
 
-echo "Generating .gitignore to ignore everything except .dart files..."
+#But dont ignore dart files
 
-# Clear existing .gitignore content (optional, but good for a fresh start)
-> "$GITIGNORE_FILE"
+!*.dart
 
-# Add the rule to ignore everything
-echo "*" >> "$GITIGNORE_FILE"
-echo "!*.dart" >> "$GITIGNORE_FILE"
-echo "!/your_project_root_directory/" >> "$GITIGNORE_FILE"
-echo "!/your_project_root_directory/**/*" >> "$GITIGNORE_FILE"
+#As well as gitignore in itself
+!.gitignore
 
-# Add rules to unignore the .gitignore itself and directories
-echo "!.gitignore" >> "$GITIGNORE_FILE"
-echo "!*/" >> "$GITIGNORE_FILE" # Unignore directories
-
-echo "" >> "$GITIGNORE_FILE" # Add a newline for better readability
-echo "# Add any other specific exceptions below this line" >> "$GITIGNORE_FILE"
-
-
-echo "Done! The .gitignore file has been updated."
-echo "Remember to replace '/your_project_root_directory/' with your actual project root, if applicable."
-echo "If you have specific subdirectories that also need to be unignored, you might need to add more specific '!/' rules
+#Unignore directoies
+!*/
