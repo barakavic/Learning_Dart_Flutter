@@ -12,7 +12,7 @@ class Bear{
 void trackingBear(){
 
   String color;
-  print("Tracking bear with collarId ${collarId}");
+  print("Tracking bear with collarId $collarId");
   
 
 

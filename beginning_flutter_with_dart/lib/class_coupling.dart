@@ -6,14 +6,18 @@ class CheckHttps{
       return true;
 
     }
-    else return false;
+    else {
+      return false;
+    }
 
   }
 }
 
 String myConnection(String dbName, String hostname, String username, [String? optionalPassword]){
   if (optionalPassword == null){
-    return "${dbName}, ${hostname}, $username"; 
+    return "$dbName, $hostname, $username"; 
   }
-  else return "${dbName}, ${hostname}, ${username}, $optionalPassword";
+  else {
+    return "$dbName, $hostname, $username, $optionalPassword";
+  }
 }

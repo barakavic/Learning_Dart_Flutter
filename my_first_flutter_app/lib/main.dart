@@ -5,6 +5,8 @@ void main(){
 }
 
 class MyFirstApp extends StatelessWidget{
+  const MyFirstApp({super.key});
+
 
     @override
 
@@ -25,23 +27,68 @@ class MyFirstApp extends StatelessWidget{
         IconButton(icon: Icon(Icons.search),
         onPressed: null,
         tooltip: "Search",
+        color: Color.fromRGBO(29, 28, 28, 0.8),
+        
         ),
     ],
+
+    backgroundColor: Colors.purple,
             ),
-        body: Center(child: Text("First Flutter App",
+
+    body: Column(
         
-        style: TextStyle(fontSize: 20.00,
-        fontStyle: FontStyle.italic),
+      children: [
+        Text("You need to answer a few questions to know your level ...",
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          fontSize: 25,
+
         ),
         
         ),
 
-        floatingActionButton: FloatingActionButton(
+        ElevatedButton(onPressed: null,
+         child: Text("You have chosen answer 1",
+         style: TextStyle(
+          fontSize: 22.00,
+          color: Color.fromRGBO(29, 28, 28, 0.5),
 
-            tooltip: 'Add',
-            child: Icon(Icons.add),
-            onPressed: null,
-        ),
+         ),
+         
+         
+         ),
+         ),
+
+         ElevatedButton(onPressed: null,
+          child: Text("You have chosen answer 2",
+         style: TextStyle(fontSize: 22.00,
+         color: Color.fromRGBO(29, 28, 28, 0.5),
+
+         ),
+         ),
+         ),
+
+                  ElevatedButton(onPressed: null,
+         child: Text("You have chosen answer 3",
+         style: TextStyle(fontSize: 22.00,
+         color: Color.fromRGBO(29, 28, 28, 0.5),
+         fontFamily: 'Segoe UI',
+         ),
+         ),
+         ),
+
+        
+        
+
+
+        
+      ],
+    ),
+    floatingActionButton: FloatingActionButton(onPressed: null,
+    tooltip:  "add",
+    child: Icon(Icons.add),
+    
+    ),
 
 
 

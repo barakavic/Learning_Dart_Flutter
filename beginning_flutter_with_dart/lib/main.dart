@@ -20,7 +20,7 @@ void main(List<String> arguments){
 
   var myObject = myClass('Sanjib');
   myObject.setName = "Sanjib";
-  print('${myObject.getName}');
+  print(myObject.getName);
 
 
   labelsLoop();
