@@ -50,7 +50,7 @@ class MyStatelessScaffoldWidget extends StatelessWidget{
       appBar: AppBar(
         actions: <Widget>[
           IconButton(
-            tooltip: 'Show Sidebar',
+            tooltip: 'Show SnackBar',
             onPressed: (){
               ScaffoldMessenger.of(context).showSnackBar(snackBarOne);
             },
@@ -75,9 +75,11 @@ class MyStatelessScaffoldWidget extends StatelessWidget{
 
 
         ],
-        leading: IconButton(onPressed: (){
+        leading: IconButton(
+          onPressed: (){
           ScaffoldMessenger.of(context).showSnackBar(snackBarThree);
-        }, 
+        },
+        tooltip: 'Navigation Menu', 
         icon: Icon(Icons.menu),
         
         ),
@@ -134,8 +136,11 @@ class MyStatelessScaffoldWidget extends StatelessWidget{
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(onPressed: null,
+      floatingActionButton: FloatingActionButton(
+        onPressed: null,
+      child: Icon(Icons.add),
       tooltip: 'Add',
+      
       backgroundColor: Color.fromARGB(255, 110, 0, 0),
       ),
 
